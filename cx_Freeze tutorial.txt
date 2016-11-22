@@ -22,7 +22,8 @@ and right clicking in the file folder. Then click open command window here. type
 
 python setup.py build
 
-and press enter. Wait for a little while and if all went well, then you should get a folder called build. Open it, 
+and press enter. If it says python is not recognized, remove the python part so it just says setup.py build.
+Wait for a little while and if all went well, then you should get a folder called build. Open it, 
 open the folder inside it, and itll be filled with crap. All the included files WILL NOT be in there by default, so
 you have to put them in by yourself. If you have text in your game, then you will need to include a text file. This
 can be easily done by searching .ttf into your library thing and finding the desired text type you use in your game.
