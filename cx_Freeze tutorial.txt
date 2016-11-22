@@ -1,0 +1,33 @@
+First things first, cx_Freeze is a library (like pygame) for python that converts your files into .exe's. Google 
+it and then install. Heres the syntax to use:
+
+from cx_Freeze import setup, Executable
+
+setup(
+
+    name = "Desired Name of the .exe",
+    options = {'build.exe': {'packages':['pygame'],"included files": ["setup.py"
+                                                                      ]}},
+    version = "1.0",
+    executables = [Executable('Name of File')]
+
+    )
+
+
+you are going to want to make a file called setup.py filled with this in the same folder that you have the game in.
+If you use images, include the 'imagename.png' in the included files section. If you have something like my square 
+gladiators thing that has another file called intro.py, add that into the files section. Simple. Change the version 
+if you want, and fill in the name under executable('Name'). To use, go into cmd (command window) by pressing shift
+and right clicking in the file folder. Then click open command window here. type:
+
+python setup.py build
+
+and press enter. Wait for a little while and if all went well, then you should get a folder called build. Open it, 
+open the folder inside it, and itll be filled with crap. All the included files WILL NOT be in there by default, so
+you have to put them in by yourself. If you have text in your game, then you will need to include a text file. This
+can be easily done by searching .ttf into your library thing and finding the desired text type you use in your game.
+If you have default, then a little work may be need to be done in order to find out what text file you are using, but
+it is probably arial.ttf. put this in the file. After that, it should work. an easy way to debug it if it wont work
+is to open a command window in the folder with all the stuff in it and then drag and click the .exe into the 
+command window and pressing enter. all errors raised will show in the command window. A shortcut can then be created
+to access it easily. After that, you are DONE!!
